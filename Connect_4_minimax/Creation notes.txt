@@ -1,0 +1,63 @@
+*Creation notes
+#PART 1 :
+ -How to represent the board(fn)  
+  --a matrix using numpy
+
+ -validity of a move
+  --a move is choosing a column to drop their piece into
+  --check if it falls under the column limits
+  --check if the column is not completelty filled 
+
+ -Getting an empty row in the column
+  --just iterate thru the col and return the empty row
+
+ -dropping a piece
+  --get the row and the piece, assign it to the row in the board
+
+ -flipping the array to get a proper board filling experience
+
+ !when the game should end
+  --termination constraints 
+  --inputs from player 1 and player 2
+    ---distinguishing using turn && alternating it 
+  --distinguishing the pieces
+
+ #Conclusion : initial framework and filling is donen
+
+ -setting up the constraints  :: winning conditions
+  --checking all possibilites(four in a row)
+    ---horizontal possibilites
+    ---vertical possibiliees
+    ---limit line for checking, O(n^2)
+    ---diagonal possibilites
+       ----positive slope
+       ----negative slop
+  --can use +1 loop  & flag to extend this to connect n
+
+  #Conclusion : checked all possiblities, code part is almost done
+
+
+#PART 2 : Graphics
+  -pygame usage
+   --pygame.init()
+   --a window of squares(sort of) : rows+1(entry),columns  
+   --events(mouse click)
+
+  -drawing the board 
+   --events(here, keydown)
+   --colourings andd turn indications
+     --rectangle and circles
+       ---positioning is similar to swing
+
+  -dropping the pieces 
+   --where we drop the piece depends on X coordinate of the mouse click
+     ---rounding it off to column indices
+   --drop graphics
+     ---kinda redraw the board
+  
+  -colouring based on offsets
+
+  -Cursor scroll effect
+   --mouse motion 
+ 
+  -winning notification

@@ -1,0 +1,28 @@
+How the AI works 
+ -horizontal block
+ -vertical block
+
+-random move AI
+  --introducing delay
+  --just randomly generating a colum in response to the player
+  --primitive, can't really block moves
+  --turn itself is random
+
+-usage of scoring mechanisms
+  --coming up with a means of quantifying a state
+  --score calculation for all pieces of a type
+    ---three consec
+    ---four scoring
+    ---two consec
+    ---blocking
+
+-picking the best move 
+ --running the score calcn on every possible move 
+ --deciding upon based on the context 
+
+-The minmax algorithm
+ --each level represents the state of board after a player makes a move
+ --at each level players oppose each other (min - max)
+   --the opponent minimizes the max player's gains
+   --thus both the players make the optimal move at each turn
+   --and a global optima is choosen
